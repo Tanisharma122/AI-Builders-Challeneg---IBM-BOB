@@ -21,7 +21,7 @@
 | **Primary IBM Tool** | **IBM Bob** (AI Software Engineer) |
 | **IBM AI Model** | **IBM Granite 3.0** (`ibm-granite/granite-3.0-8b-instruct`) |
 | **IBM Platform** | **IBM watsonx.ai** â€” Granite inference via HuggingFace |
-| **Team** | Tanisha Sharma |
+| **Team** | Tanisha Sharma · Jeneesh Vandra |
 
 ---
 
