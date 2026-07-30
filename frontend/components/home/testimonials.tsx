@@ -1,7 +1,7 @@
-const testimonials = [
+﻿const testimonials = [
   {
     quote:
-      'CreaTect cut my editing time from a full day to under an hour. The auto-clipping just knows which moments will pop.',
+      'Tani cut my editing time from a full day to under an hour. The auto-clipping just knows which moments will pop.',
     name: 'Sarah L.',
     role: 'YouTube Creator',
     stat: '1.2M subscribers',
@@ -52,7 +52,7 @@ export function Testimonials() {
                 <div>
                   <p className="font-semibold text-foreground">{item.name}</p>
                   <p className="text-sm text-muted-foreground">
-                    {item.role} · {item.stat}
+                    {item.role} Â· {item.stat}
                   </p>
                 </div>
               </figcaption>
@@ -63,3 +63,4 @@ export function Testimonials() {
     </section>
   )
 }
+

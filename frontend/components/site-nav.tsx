@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 const navLinks = [
   { label: 'Products', href: '/#suite' },
@@ -14,7 +14,7 @@ export function Logo() {
       <span className="flex size-8 items-center justify-center rounded-lg bg-brand text-base font-bold text-brand-foreground">
         C
       </span>
-      <span className="text-lg font-semibold tracking-tight text-foreground">CreaTect AI</span>
+      <span className="text-lg font-semibold tracking-tight text-foreground">Tani</span>
     </Link>
   )
 }
@@ -60,3 +60,4 @@ export function SiteNav({ simplified = false }: { simplified?: boolean }) {
     </header>
   )
 }
+

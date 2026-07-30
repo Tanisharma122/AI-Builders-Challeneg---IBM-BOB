@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import { useRef, useState } from 'react'
@@ -29,7 +29,7 @@ function HeroVideo() {
           playsInline
         />
 
-        {/* Gradient overlay — only when paused */}
+        {/* Gradient overlay â€” only when paused */}
         {!playing && (
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent rounded-2xl pointer-events-none" />
         )}
@@ -44,14 +44,14 @@ function HeroVideo() {
           }`}
         >
           {playing
-            ? <span className="text-2xl leading-none">⏸</span>
+            ? <span className="text-2xl leading-none">â¸</span>
             : <Play className="ml-1 size-6" aria-hidden="true" />
           }
         </button>
 
         {/* Badge */}
         <div className="absolute bottom-4 left-4 rounded-lg border border-brand/40 bg-background/80 px-3 py-1.5 backdrop-blur-md">
-          <span className="font-mono text-[10px] tracking-widest text-brand">CREATECT AI — INTRO</span>
+          <span className="font-mono text-[10px] tracking-widest text-brand">Tani â€” INTRO</span>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right — intro video */}
+        {/* Right â€” intro video */}
         <div className="relative">
           <HeroVideo />
         </div>
@@ -108,3 +108,4 @@ export function Hero() {
     </section>
   )
 }
+

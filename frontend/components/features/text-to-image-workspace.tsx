@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import {
@@ -25,42 +25,42 @@ type ImageSize = { label: string; w: number; h: number; tag: string }
 
 const IMAGE_SIZES: { group: string; sizes: ImageSize[] }[] = [
   {
-    group: '⬛ Square',
+    group: 'â¬› Square',
     sizes: [
-      { label: '512 × 512',   w: 512,  h: 512,  tag: 'SD' },
-      { label: '768 × 768',   w: 768,  h: 768,  tag: 'HD' },
-      { label: '1024 × 1024', w: 1024, h: 1024, tag: '1K' },
+      { label: '512 Ã— 512',   w: 512,  h: 512,  tag: 'SD' },
+      { label: '768 Ã— 768',   w: 768,  h: 768,  tag: 'HD' },
+      { label: '1024 Ã— 1024', w: 1024, h: 1024, tag: '1K' },
     ],
   },
   {
-    group: '🖼 Landscape',
+    group: 'ðŸ–¼ Landscape',
     sizes: [
-      { label: '768 × 512',   w: 768,  h: 512,  tag: '3:2' },
-      { label: '1024 × 576',  w: 1024, h: 576,  tag: '16:9' },
-      { label: '1152 × 768',  w: 1152, h: 768,  tag: '3:2 HD' },
-      { label: '1216 × 832',  w: 1216, h: 832,  tag: '3:2 XL' },
-      { label: '1280 × 720',  w: 1280, h: 720,  tag: '720p' },
-      { label: '1344 × 768',  w: 1344, h: 768,  tag: '16:9 HD' },
-      { label: '1536 × 640',  w: 1536, h: 640,  tag: 'Ultra-wide' },
-      { label: '1920 × 1080', w: 1920, h: 1080, tag: '1080p' },
+      { label: '768 Ã— 512',   w: 768,  h: 512,  tag: '3:2' },
+      { label: '1024 Ã— 576',  w: 1024, h: 576,  tag: '16:9' },
+      { label: '1152 Ã— 768',  w: 1152, h: 768,  tag: '3:2 HD' },
+      { label: '1216 Ã— 832',  w: 1216, h: 832,  tag: '3:2 XL' },
+      { label: '1280 Ã— 720',  w: 1280, h: 720,  tag: '720p' },
+      { label: '1344 Ã— 768',  w: 1344, h: 768,  tag: '16:9 HD' },
+      { label: '1536 Ã— 640',  w: 1536, h: 640,  tag: 'Ultra-wide' },
+      { label: '1920 Ã— 1080', w: 1920, h: 1080, tag: '1080p' },
     ],
   },
   {
-    group: '📱 Portrait',
+    group: 'ðŸ“± Portrait',
     sizes: [
-      { label: '512 × 768',   w: 512,  h: 768,  tag: '2:3' },
-      { label: '576 × 1024',  w: 576,  h: 1024, tag: '9:16' },
-      { label: '768 × 1152',  w: 768,  h: 1152, tag: '2:3 HD' },
-      { label: '832 × 1216',  w: 832,  h: 1216, tag: '2:3 XL' },
-      { label: '720 × 1280',  w: 720,  h: 1280, tag: '9:16 HD' },
-      { label: '768 × 1344',  w: 768,  h: 1344, tag: '9:16 XL' },
-      { label: '640 × 1536',  w: 640,  h: 1536, tag: 'Ultra-tall' },
-      { label: '1080 × 1920', w: 1080, h: 1920, tag: '1080p Portrait' },
+      { label: '512 Ã— 768',   w: 512,  h: 768,  tag: '2:3' },
+      { label: '576 Ã— 1024',  w: 576,  h: 1024, tag: '9:16' },
+      { label: '768 Ã— 1152',  w: 768,  h: 1152, tag: '2:3 HD' },
+      { label: '832 Ã— 1216',  w: 832,  h: 1216, tag: '2:3 XL' },
+      { label: '720 Ã— 1280',  w: 720,  h: 1280, tag: '9:16 HD' },
+      { label: '768 Ã— 1344',  w: 768,  h: 1344, tag: '9:16 XL' },
+      { label: '640 Ã— 1536',  w: 640,  h: 1536, tag: 'Ultra-tall' },
+      { label: '1080 Ã— 1920', w: 1080, h: 1920, tag: '1080p Portrait' },
     ],
   },
 ]
 
-const DEFAULT_SIZE: ImageSize = { label: '1024 × 1024', w: 1024, h: 1024, tag: '1K' }
+const DEFAULT_SIZE: ImageSize = { label: '1024 Ã— 1024', w: 1024, h: 1024, tag: '1K' }
 
 type Stage = 'compose' | 'enhancing' | 'review' | 'generating' | 'done' | 'error'
 
@@ -151,7 +151,7 @@ export function TextToImageWorkspace() {
     if (!generatedImage) return
     const link = document.createElement('a')
     link.href = generatedImage
-    link.download = `createct-ai-${Date.now()}.png`
+    link.download = `Tani-ai-${Date.now()}.png`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -173,7 +173,7 @@ export function TextToImageWorkspace() {
             AI Text-to-Image Workspace
           </h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            Describe your scene, let our AI craft the perfect visual prompt, review &amp; confirm — then watch your image come to life.
+            Describe your scene, let our AI craft the perfect visual prompt, review &amp; confirm â€” then watch your image come to life.
           </p>
         </div>
 
@@ -219,10 +219,10 @@ export function TextToImageWorkspace() {
           })}
         </div>
 
-        {/* ── Main grid: LEFT = controls, RIGHT = image + enhanced prompt ── */}
+        {/* â”€â”€ Main grid: LEFT = controls, RIGHT = image + enhanced prompt â”€â”€ */}
         <div className="grid gap-8 lg:grid-cols-12">
 
-          {/* ── LEFT PANEL ── */}
+          {/* â”€â”€ LEFT PANEL â”€â”€ */}
           <div className="flex flex-col gap-5 lg:col-span-5">
 
             {/* STAGE: compose / error */}
@@ -266,7 +266,7 @@ export function TextToImageWorkspace() {
                     </div>
                   ))}
 
-                  {/* ── Image Size Selector ── */}
+                  {/* â”€â”€ Image Size Selector â”€â”€ */}
                   <div className="flex flex-col gap-2">
                     <label className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
                       <Maximize2 className="size-3" />
@@ -327,14 +327,14 @@ export function TextToImageWorkspace() {
                   <Sparkles className="size-5 text-brand animate-pulse" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Getting your prompt ready…</p>
+                  <p className="font-semibold text-foreground">Getting your prompt readyâ€¦</p>
                   <p className="text-xs text-muted-foreground mt-1 max-w-xs">Adding cinematic detail, lighting cues, and composition notes to your idea.</p>
                 </div>
                 <div className="w-full rounded-xl border border-border bg-background/50 p-3 text-left">
                   <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground mb-1.5">Progress</p>
                   <div className="space-y-1 text-xs font-mono">
                     <div className="flex items-center gap-2 text-foreground"><CheckCircle2 className="size-3 text-brand shrink-0" />Your inputs have been received</div>
-                    <div className="flex items-center gap-2 text-brand"><RefreshCw className="size-3 animate-spin shrink-0" />Crafting a detailed visual prompt…</div>
+                    <div className="flex items-center gap-2 text-brand"><RefreshCw className="size-3 animate-spin shrink-0" />Crafting a detailed visual promptâ€¦</div>
                   </div>
                 </div>
               </div>
@@ -349,7 +349,7 @@ export function TextToImageWorkspace() {
                     Your Enhanced Prompt is Ready
                   </p>
                   <span className="text-[10px] uppercase tracking-wider text-brand font-semibold bg-brand/10 border border-brand/30 rounded-full px-2 py-0.5">
-                    ✦ AI Enhanced
+                    âœ¦ AI Enhanced
                   </span>
                 </div>
                 <div className="rounded-xl border border-brand/40 bg-background/80 p-4 relative">
@@ -388,15 +388,15 @@ export function TextToImageWorkspace() {
                   <ImageIcon className="size-5 text-brand animate-pulse" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Your image is being created…</p>
+                  <p className="font-semibold text-foreground">Your image is being createdâ€¦</p>
                   <p className="text-xs text-muted-foreground mt-1 max-w-xs">Our AI is painting your scene. This usually takes a few seconds.</p>
                 </div>
                 <div className="w-full rounded-xl border border-border bg-background/50 p-3 text-left">
                   <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground mb-1.5">Progress</p>
                   <div className="space-y-1 text-xs font-mono">
                     <div className="flex items-center gap-2 text-foreground"><CheckCircle2 className="size-3 text-brand shrink-0" />Prompt received and ready</div>
-                    <div className="flex items-center gap-2 text-foreground"><CheckCircle2 className="size-3 text-brand shrink-0" />Enhanced prompt confirmed ✓</div>
-                    <div className="flex items-center gap-2 text-brand"><RefreshCw className="size-3 animate-spin shrink-0" />Generating your image…</div>
+                    <div className="flex items-center gap-2 text-foreground"><CheckCircle2 className="size-3 text-brand shrink-0" />Enhanced prompt confirmed âœ“</div>
+                    <div className="flex items-center gap-2 text-brand"><RefreshCw className="size-3 animate-spin shrink-0" />Generating your imageâ€¦</div>
                   </div>
                 </div>
               </div>
@@ -433,7 +433,7 @@ export function TextToImageWorkspace() {
             )}
           </div>
 
-          {/* ── RIGHT PANEL — image + enhanced prompt BELOW it ── */}
+          {/* â”€â”€ RIGHT PANEL â€” image + enhanced prompt BELOW it â”€â”€ */}
           <div className="lg:col-span-7 flex flex-col gap-4">
 
             {/* Image preview box */}
@@ -452,7 +452,7 @@ export function TextToImageWorkspace() {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
                 </>
               ) : (
-                /* Placeholder / loading states — NO default image */
+                /* Placeholder / loading states â€” NO default image */
                 <div className="flex flex-col items-center gap-4 text-center p-8">
                   {stage === 'enhancing' && (
                     <>
@@ -460,7 +460,7 @@ export function TextToImageWorkspace() {
                         <div className="absolute inset-0 rounded-full border-4 border-brand/20 border-t-brand animate-spin" />
                         <Sparkles className="size-6 text-brand animate-pulse" />
                       </div>
-                      <p className="font-semibold text-foreground">Getting your prompt ready…</p>
+                      <p className="font-semibold text-foreground">Getting your prompt readyâ€¦</p>
                       <p className="text-xs text-muted-foreground">Adding detail, mood, and composition to your idea</p>
                     </>
                   )}
@@ -470,7 +470,7 @@ export function TextToImageWorkspace() {
                         <div className="absolute inset-0 rounded-full border-4 border-brand/20 border-t-brand animate-spin" />
                         <ImageIcon className="size-6 text-brand animate-pulse" />
                       </div>
-                      <p className="font-semibold text-foreground">Creating your image…</p>
+                      <p className="font-semibold text-foreground">Creating your imageâ€¦</p>
                       <p className="text-xs text-muted-foreground">Our AI is painting your scene. Almost there!</p>
                       <div className="w-full max-w-xs space-y-2 mt-2">
                         <div className="h-2.5 rounded-full bg-muted animate-pulse w-3/4" />
@@ -484,7 +484,7 @@ export function TextToImageWorkspace() {
                       <div className="flex size-16 items-center justify-center rounded-2xl border-2 border-brand/40 bg-brand/10 text-brand">
                         <CheckCircle2 className="size-8" />
                       </div>
-                      <p className="font-semibold text-foreground">Prompt Ready — Awaiting Confirmation</p>
+                      <p className="font-semibold text-foreground">Prompt Ready â€” Awaiting Confirmation</p>
                       <p className="text-xs text-muted-foreground max-w-xs">Confirm the enhanced prompt on the left to start rendering.</p>
                     </>
                   )}
@@ -494,14 +494,14 @@ export function TextToImageWorkspace() {
                         <ImageIcon className="size-8" />
                       </div>
                       <p className="font-semibold text-foreground">Preview will appear here</p>
-                      <p className="text-xs text-muted-foreground max-w-sm">Enter your scene idea on the left and run the pipeline — your image will render here.</p>
+                      <p className="text-xs text-muted-foreground max-w-sm">Enter your scene idea on the left and run the pipeline â€” your image will render here.</p>
                     </>
                   )}
                 </div>
               )}
             </div>
 
-            {/* ── Enhanced prompt block — BELOW the image ── */}
+            {/* â”€â”€ Enhanced prompt block â€” BELOW the image â”€â”€ */}
             {(stage === 'review' || stage === 'generating' || stage === 'done') && enhancedPrompt && (
               <div className="rounded-2xl border border-brand/30 bg-card/50 p-5 backdrop-blur-md">
                 <div className="flex items-center gap-2 mb-3">
@@ -522,3 +522,4 @@ export function TextToImageWorkspace() {
     </section>
   )
 }
+

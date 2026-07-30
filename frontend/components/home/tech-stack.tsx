@@ -1,4 +1,4 @@
-import { Cpu, Network, ShieldCheck } from 'lucide-react'
+﻿import { Cpu, Network, ShieldCheck } from 'lucide-react'
 
 const pillars = [
   {
@@ -29,8 +29,8 @@ export function TechStack() {
           Built on a governed, multi-agent architecture.
         </h2>
         <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-          CreaTect AI combines multimodal reasoning with coordinated agents to plan, generate, and
-          distribute content autonomously — with enterprise governance at every step.
+          Tani combines multimodal reasoning with coordinated agents to plan, generate, and
+          distribute content autonomously â€” with enterprise governance at every step.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -51,3 +51,4 @@ export function TechStack() {
     </section>
   )
 }
+

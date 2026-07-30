@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { Logo } from '@/components/site-nav'
 
 const columns = [
@@ -58,10 +58,11 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border/60">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-6 text-sm text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} CreaTect AI. All rights reserved.</p>
+          <p>Â© {new Date().getFullYear()} Tani. All rights reserved.</p>
           <p>Made with IBM Bob</p>
         </div>
       </div>
     </footer>
   )
 }
+

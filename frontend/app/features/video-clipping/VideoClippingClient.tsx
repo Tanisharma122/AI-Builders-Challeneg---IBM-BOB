@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Image from 'next/image'
 import Link from 'next/link'
@@ -12,7 +12,7 @@ function VideoClippingVisual() {
   return (
     <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
       <div className="relative aspect-video bg-card">
-        {/* Gradient background fallback — no onError handler needed */}
+        {/* Gradient background fallback â€” no onError handler needed */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand/20 via-card to-background" />
 
         {/* Play button */}
@@ -84,7 +84,7 @@ export default function VideoClippingClient() {
           eyebrowIcon={Repeat}
           headline="Identify high-engagement segments to create viral shorts and reels."
           subtext="Analyze long-form video, generate metadata (titles, tags, descriptions), and distribute to YouTube, Instagram, TikTok, and LinkedIn in one click."
-          ctaLabel="Launch Studio →"
+          ctaLabel="Launch Studio â†’"
           ctaHref="/studio-upload"
           visual={<VideoClippingVisual />}
         />
@@ -93,10 +93,10 @@ export default function VideoClippingClient() {
         <div className="mx-auto max-w-7xl px-6 pb-12">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 mb-12">
             {[
-              { icon: '🎙', label: 'Word-level Transcription' },
-              { icon: '🧠', label: 'IBM Granite 3.0 Analysis' },
-              { icon: '📱', label: '9:16 Smart Reframe' },
-              { icon: '▶', label: 'YouTube Shorts Publish' },
+              { icon: 'ðŸŽ™', label: 'Word-level Transcription' },
+              { icon: 'ðŸ§ ', label: 'IBM Granite 3.0 Analysis' },
+              { icon: 'ðŸ“±', label: '9:16 Smart Reframe' },
+              { icon: 'â–¶', label: 'YouTube Shorts Publish' },
             ].map((f) => (
               <div key={f.label} className="flex items-center gap-2 rounded-xl border border-border bg-card/60 px-3 py-3 text-sm text-muted-foreground">
                 <span>{f.icon}</span>
@@ -117,7 +117,7 @@ export default function VideoClippingClient() {
               href="/studio-upload"
               className="inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground shadow-[0_0_24px_-6px] shadow-brand/70 transition-colors hover:bg-brand/90"
             >
-              Start Clipping →
+              Start Clipping â†’
             </Link>
           </div>
         </div>
@@ -126,3 +126,4 @@ export default function VideoClippingClient() {
     </div>
   )
 }
+

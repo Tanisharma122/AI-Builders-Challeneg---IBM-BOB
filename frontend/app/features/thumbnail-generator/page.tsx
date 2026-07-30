@@ -1,13 +1,13 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { FeatureSubmenu } from '@/components/feature-submenu'
 import { ThumbnailWorkspace } from '@/components/features/thumbnail-workspace'
 
 export const metadata: Metadata = {
-  title: 'AI Thumbnail Generator — CreaTect AI',
+  title: 'AI Thumbnail Generator â€” Tani',
   description:
-    'Enter your video title and hook, choose a style and mood — our AI designs a scroll-stopping high-CTR thumbnail in seconds.',
+    'Enter your video title and hook, choose a style and mood â€” our AI designs a scroll-stopping high-CTR thumbnail in seconds.',
 }
 
 export default function ThumbnailGeneratorPage() {
@@ -22,3 +22,4 @@ export default function ThumbnailGeneratorPage() {
     </div>
   )
 }
+
