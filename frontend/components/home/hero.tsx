@@ -1,12 +1,66 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
-import { Play, Sparkles, Crosshair } from 'lucide-react'
+import { useRef, useState } from 'react'
+import { Play, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+
+function HeroVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [playing, setPlaying] = useState(false)
+
+  const toggle = () => {
+    const v = videoRef.current
+    if (!v) return
+    if (v.paused) { v.play(); setPlaying(true) }
+    else          { v.pause(); setPlaying(false) }
+  }
+
+  return (
+    <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
+      <div className="relative aspect-video bg-black">
+        <video
+          ref={videoRef}
+          src="/intro.mp4"
+          className="w-full h-full object-cover rounded-2xl"
+          preload="metadata"
+          onEnded={() => setPlaying(false)}
+          onClick={toggle}
+          playsInline
+        />
+
+        {/* Gradient overlay — only when paused */}
+        {!playing && (
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent rounded-2xl pointer-events-none" />
+        )}
+
+        {/* Play / Pause button */}
+        <button
+          type="button"
+          onClick={toggle}
+          aria-label={playing ? 'Pause intro video' : 'Play intro video'}
+          className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex size-16 items-center justify-center rounded-full bg-brand/90 text-brand-foreground shadow-[0_0_40px_-4px] shadow-brand transition-all hover:scale-105 ${
+            playing ? 'opacity-0 hover:opacity-100' : 'opacity-100'
+          }`}
+        >
+          {playing
+            ? <span className="text-2xl leading-none">⏸</span>
+            : <Play className="ml-1 size-6" aria-hidden="true" />
+          }
+        </button>
+
+        {/* Badge */}
+        <div className="absolute bottom-4 left-4 rounded-lg border border-brand/40 bg-background/80 px-3 py-1.5 backdrop-blur-md">
+          <span className="font-mono text-[10px] tracking-widest text-brand">CREATECT AI — INTRO</span>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* subtle glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-40 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-brand/20 blur-[120px]"
@@ -34,53 +88,21 @@ export function Hero() {
               Start Creating
             </Button>
             <Button
-              render={<Link href="/#suite" />}
+              render={<Link href="/studio-upload" />}
               nativeButton={false}
               size="lg"
               variant="outline"
               className="border-border bg-transparent text-foreground hover:bg-secondary"
             >
               <Play className="size-4" aria-hidden="true" />
-              Watch Demo
+              Try It Now
             </Button>
           </div>
         </div>
 
-        {/* Right — video player */}
+        {/* Right — intro video */}
         <div className="relative">
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
-            <div className="relative aspect-video">
-              <Image
-                src="/hero-montage.png"
-                alt="Montage of creative work including video editing and digital art"
-                fill
-                priority
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-
-              {/* play button */}
-              <button
-                type="button"
-                aria-label="Play showreel"
-                className="absolute left-1/2 top-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-brand/90 text-brand-foreground shadow-[0_0_40px_-4px] shadow-brand transition-transform hover:scale-105"
-              >
-                <Play className="ml-1 size-6" aria-hidden="true" />
-              </button>
-
-              {/* target overlay */}
-              <div className="absolute right-6 top-6 flex flex-col items-end gap-2">
-                <div className="relative flex size-20 items-center justify-center">
-                  <div className="absolute inset-0 rounded-md border-2 border-brand/70" />
-                  <div className="absolute inset-0 rounded-md border-2 border-brand/70 [clip-path:polygon(0_0,30%_0,30%_8%,8%_8%,8%_30%,0_30%)]" />
-                  <Crosshair className="size-6 text-brand" aria-hidden="true" />
-                </div>
-                <span className="rounded-md bg-background/80 px-2 py-1 font-mono text-[10px] tracking-widest text-brand backdrop-blur">
-                  CREATOR INSIGHTS ACTIVE
-                </span>
-              </div>
-            </div>
-          </div>
+          <HeroVideo />
         </div>
       </div>
     </section>
