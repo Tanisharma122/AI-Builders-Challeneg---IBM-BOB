@@ -13,6 +13,14 @@
 
 ---
 
+## 🖥️ Platform Preview
+
+<img src="docs/screenshots/landing-hero.png" alt="Tani — Main Landing Page" width="100%"/>
+
+> *The main landing page — dark cinematic UI with glowing accents.*
+
+---
+
 ## IBM AI Builders Challenge 2026 — Submission
 
 | Field | Details |
@@ -132,6 +140,12 @@ IBM Granite 3.0 (`ibm-granite/granite-3.0-8b-instruct`) is the **core intelligen
 - Bug fixes — resolved `httplib2` Windows redirect bug, Next.js Server/Client component split, dark theme visibility issues
 - Git & deployment — `.gitignore`, secrets audit, README, GitHub push
 
+#### IBM Bob's Coding Environment — Proof of Build
+
+<img src="docs/screenshots/coding-environment.png" alt="IBM Bob Coding Environment — Building Tani" width="100%"/>
+
+> *Every component, API route, and service module was written inside IBM Bob's native coding environment shown above.*
+
 #### IBM Bob's Development Approach:
 IBM Bob followed a **spec-driven, sequential implementation** plan (`tasks.md`) with:
 - Modular service architecture (each service is independently testable)
@@ -196,6 +210,26 @@ Tani demonstrates agentic behavior through:
 | Thumbnail Generator | Gemini scene synthesis -> FLUX.1-schnell with smart text overlay placement |
 | Full Dark UI | Tani dark theme with brand color system — every page, every component |
 | Multi-Platform Export | YouTube Shorts, Instagram Reels, LinkedIn, X — platform-specific metadata |
+
+---
+
+## 🖼️ Text-to-Image Generation
+
+<img src="docs/screenshots/image-generation-page.png" alt="Text-to-Image Generation — Live Preview" width="100%"/>
+
+> *The AI Text-to-Image workspace — describe any scene, get a cinematic image in seconds using FLUX.1-schnell.*
+
+**Pipeline:** Raw text → Gemini prompt enhancement → FLUX.1-schnell render → one-click download.
+
+---
+
+## 🎬 AI Thumbnail Generator
+
+<img src="docs/screenshots/thumbnail-generated.png" alt="AI Thumbnail Generated" width="100%"/>
+
+> *A fully generated thumbnail — platform-aware, style-aware, with smart text overlay placement.*
+
+**5-step pipeline:** Platform → Title & overlay text → Category/style/background/mood → Face expression → Optional face upload → **Rendered thumbnail**.
 
 ---
 
@@ -277,6 +311,13 @@ project-root/
 |   +-- lib/api.ts                     # Typed fetch wrappers
 |   +-- lib/types.ts                   # TypeScript interfaces
 |   +-- .env.local.example             # Template only — NO real keys
+|
++-- docs/
+|   +-- screenshots/                   # Real proof-of-work screenshots
+|       +-- landing-hero.png           # Main landing page
+|       +-- image-generation-page.png  # Text-to-image workspace live
+|       +-- thumbnail-generated.png    # Generated thumbnail result
+|       +-- coding-environment.png     # IBM Bob coding environment
 |
 +-- README.md
 +-- .gitignore                         # Blocks all .env files

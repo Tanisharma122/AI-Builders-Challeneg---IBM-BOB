@@ -13,7 +13,7 @@ project-root/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py                         # FastAPI app entry point
-│   │   ├── api/
+│   │   ├── api/+
 │   │   │   ├── __init__.py
 │   │   │   ├── routes/
 │   │   │   │   ├── __init__.py

@@ -37,3 +37,9 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# -- Large media files
+*.mp4
+*.mov
+*.avi
+frontend/tsconfig.tsbuildinfo
