@@ -62,7 +62,7 @@ function CallbackInner() {
   }, [searchParams]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white gap-6 px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background gap-6 px-6">
       {/* YouTube logo */}
       <svg viewBox="0 0 90 64" className="w-20 h-14" fill="none">
         <rect width="90" height="64" rx="12" fill="#FF0000" />
@@ -72,41 +72,41 @@ function CallbackInner() {
       {status === "processing" && (
         <div className="flex flex-col items-center gap-3">
           <span className="animate-spin inline-block w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full" />
-          <p className="text-sm text-gray-600">{message}</p>
+          <p className="text-sm text-muted-foreground">{message}</p>
         </div>
       )}
 
       {status === "success" && (
         <div className="flex flex-col items-center gap-3 text-center">
-          <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-2xl text-green-600 font-bold">
+          <div className="w-12 h-12 rounded-full bg-green-950/60 border border-green-700/50 flex items-center justify-center text-2xl text-green-400 font-bold">
             ✓
           </div>
-          <p className="text-sm font-semibold text-gray-800">
+          <p className="text-sm font-semibold text-foreground">
             Connected to YouTube!
           </p>
-          <p className="text-xs text-gray-400">{message}</p>
+          <p className="text-xs text-muted-foreground">{message}</p>
         </div>
       )}
 
       {status === "error" && (
         <div className="flex flex-col items-center gap-3 text-center">
-          <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-2xl text-red-600 font-bold">
+          <div className="w-12 h-12 rounded-full bg-red-950/60 border border-red-700/50 flex items-center justify-center text-2xl text-red-400 font-bold">
             ✕
           </div>
-          <p className="text-sm font-semibold text-gray-800">
+          <p className="text-sm font-semibold text-foreground">
             Authentication failed
           </p>
-          <p className="text-xs text-gray-500 max-w-xs">{message}</p>
+          <p className="text-xs text-muted-foreground max-w-xs">{message}</p>
           <button
             onClick={() => window.close()}
-            className="text-xs text-gray-400 underline hover:text-gray-600"
+            className="text-xs text-muted-foreground underline hover:text-foreground"
           >
             Close this window
           </button>
         </div>
       )}
 
-      <p className="text-xs text-gray-300 mt-auto pb-4">Made with IBM Bob</p>
+      <p className="text-xs text-muted-foreground/40 mt-auto pb-4">Made with IBM Bob</p>
     </div>
   );
 }
@@ -117,7 +117,7 @@ export default function YouTubeCallbackPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen flex items-center justify-center bg-background">
           <span className="animate-spin inline-block w-8 h-8 border-2 border-red-500 border-t-transparent rounded-full" />
         </div>
       }

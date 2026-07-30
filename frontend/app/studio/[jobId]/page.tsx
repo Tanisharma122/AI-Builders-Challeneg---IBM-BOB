@@ -198,13 +198,13 @@ export default function StudioPage({ params }: Props) {
                 {/* Publish to YouTube Shorts button */}
                 <button
                   onClick={() => setShowPublishModal(true)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-red-500 bg-white hover:bg-red-50 transition-colors group"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-red-600/70 bg-red-950/30 hover:bg-red-950/60 transition-colors group"
                 >
                   <svg viewBox="0 0 28 20" className="w-5 h-4 flex-shrink-0" fill="none">
                     <rect width="28" height="20" rx="4" fill="#FF0000" />
                     <polygon points="11,5 11,15 20,10" fill="white" />
                   </svg>
-                  <span className="text-sm font-semibold text-red-600 group-hover:text-red-700">
+                  <span className="text-sm font-semibold text-red-400 group-hover:text-red-300">
                     Publish to YouTube Shorts
                   </span>
                 </button>

@@ -420,17 +420,17 @@ export function YouTubePublishModal({ jobId, clip, onClose }: Props) {
           {/* ── STEP: done ───────────────────────────────────────────────── */}
           {step === "done" && shortsUrl && (
             <div className="flex flex-col items-center gap-4 py-6 text-center">
-              <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center text-3xl">
+              <div className="w-14 h-14 rounded-full bg-green-950/60 border border-green-700/50 flex items-center justify-center text-3xl text-green-400">
                 ✓
               </div>
-              <p className="text-sm font-semibold text-gray-800">
+              <p className="text-sm font-semibold text-foreground">
                 Published successfully!
               </p>
               <a
                 href={shortsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-600 hover:text-red-700 font-medium text-sm underline break-all"
+                className="text-red-400 hover:text-red-300 font-medium text-sm underline break-all"
               >
                 {shortsUrl}
               </a>
