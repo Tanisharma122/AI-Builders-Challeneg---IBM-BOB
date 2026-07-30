@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GraniteAnalysisResponse",
+  "description": "Strict schema for the raw JSON object returned by IBM Granite 3.0",
+  "type": "object",
+  "required": ["clips"],
+  "additionalProperties": false,
+  "properties": {
+    "clips": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "start_time",
+          "end_time",
+          "hook_text",
+          "script_commentary",
+          "virality_score",
+          "virality_reasoning"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "1-based ranking of this clip by virality potential"
+          },
+          "start_time": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Clip start offset in seconds from the beginning of the video"
+          },
+          "end_time": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Clip end offset in seconds; must be > start_time"
+          },
+          "hook_text": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Short attention-grabbing hook sentence for this clip"
+          },
+          "script_commentary": {
+            "type": "string",
+            "description": "Detailed commentary explaining why this segment works as a short-form clip"
+          },
+          "virality_score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Predicted virality score from 0 (low) to 100 (high)"
+          },
+          "virality_reasoning": {
+            "type": "string",
+            "description": "One-paragraph reasoning for the assigned virality score"
+          }
+        }
+      }
+    }
+  }
+}

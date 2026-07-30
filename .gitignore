@@ -1,0 +1,39 @@
+﻿# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# ── Environment / Secrets (NEVER commit real keys) ────────────────────────────
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+# Allow only example/template files
+!.env.example
+!.env.local.example
+
+# ── Next.js ───────────────────────────────────────────────────────────────────
+frontend/.next/
+frontend/node_modules/
+frontend/.turbo/
+
+# ── UI-1 source (not part of deployment) ──────────────────────────────────────
+UI-1/
+
+# ── Bob workspace internals ───────────────────────────────────────────────────
+.bob/
+
+# ── OS / Editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
