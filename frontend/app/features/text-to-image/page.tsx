@@ -5,7 +5,7 @@ import { FeatureSubmenu } from '@/components/feature-submenu'
 import { TextToImageWorkspace } from '@/components/features/text-to-image-workspace'
 
 export const metadata: Metadata = {
-  title: 'In-Video Text-to-Image â€” Tani',
+  title: 'In-Video Text-to-Image â€” TANI',
   description:
     'Generate high-quality visual assets on the fly for your timelines. Refine prompts with an integrated LLM for seamless B-roll, overlays, and storyboarding.',
 }

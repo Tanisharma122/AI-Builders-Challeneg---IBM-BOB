@@ -14,7 +14,7 @@ export function Logo() {
       <span className="flex size-8 items-center justify-center rounded-lg bg-brand text-base font-bold text-brand-foreground">
         C
       </span>
-      <span className="text-lg font-semibold tracking-tight text-foreground">Tani</span>
+      <span className="text-lg font-semibold tracking-tight text-foreground">TANI</span>
     </Link>
   )
 }

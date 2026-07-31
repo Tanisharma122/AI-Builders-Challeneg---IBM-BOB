@@ -29,7 +29,7 @@ export function TechStack() {
           Built on a governed, multi-agent architecture.
         </h2>
         <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
-          Tani combines multimodal reasoning with coordinated agents to plan, generate, and
+          TANI combines multimodal reasoning with coordinated agents to plan, generate, and
           distribute content autonomously â€” with enterprise governance at every step.
         </p>
 

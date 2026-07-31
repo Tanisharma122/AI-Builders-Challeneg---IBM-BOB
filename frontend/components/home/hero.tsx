@@ -51,7 +51,7 @@ function HeroVideo() {
 
         {/* Badge */}
         <div className="absolute bottom-4 left-4 rounded-lg border border-brand/40 bg-background/80 px-3 py-1.5 backdrop-blur-md">
-          <span className="font-mono text-[10px] tracking-widest text-brand">Tani â€” INTRO</span>
+          <span className="font-mono text-[10px] tracking-widest text-brand">TANI â€” INTRO</span>
         </div>
       </div>
     </div>

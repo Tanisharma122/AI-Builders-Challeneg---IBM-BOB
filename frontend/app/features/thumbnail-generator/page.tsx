@@ -5,7 +5,7 @@ import { FeatureSubmenu } from '@/components/feature-submenu'
 import { ThumbnailWorkspace } from '@/components/features/thumbnail-workspace'
 
 export const metadata: Metadata = {
-  title: 'AI Thumbnail Generator â€” Tani',
+  title: 'AI Thumbnail Generator â€” TANI',
   description:
     'Enter your video title and hook, choose a style and mood â€” our AI designs a scroll-stopping high-CTR thumbnail in seconds.',
 }

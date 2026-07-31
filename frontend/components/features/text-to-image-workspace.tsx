@@ -151,7 +151,7 @@ export function TextToImageWorkspace() {
     if (!generatedImage) return
     const link = document.createElement('a')
     link.href = generatedImage
-    link.download = `Tani-ai-${Date.now()}.png`
+    link.download = `TANI-ai-${Date.now()}.png`
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
