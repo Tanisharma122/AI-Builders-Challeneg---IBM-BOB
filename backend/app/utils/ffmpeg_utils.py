@@ -229,9 +229,17 @@ def build_trim_and_crop_command(
     """
     vf = crop_filter
     if srt_path is not None and srt_path.exists():
-        # Escape Windows backslashes for FFmpeg filter syntax
-        srt_escaped = str(srt_path).replace("\\", "/").replace(":", "\\:")
-        vf = f"{vf},subtitles='{srt_escaped}':force_style='FontSize=14,Bold=1,Alignment=2'"
+        import platform as _platform
+        srt_str = str(srt_path)
+        if _platform.system() == "Windows":
+            # On Windows: C:\path\to\file.srt → C\:/path/to/file.srt
+            # FFmpeg filter syntax requires forward slashes and escaped colons,
+            # but the drive-letter colon must stay as \: not be removed.
+            srt_str = srt_str.replace("\\", "/")
+            # Re-escape the drive-letter colon (e.g. "C:" → "C\:")
+            if len(srt_str) >= 2 and srt_str[1] == ":":
+                srt_str = srt_str[0] + "\\:" + srt_str[2:]
+        vf = f"{vf},subtitles='{srt_str}':force_style='FontSize=14,Bold=1,Alignment=2'"
 
     cmd = [
         settings.ffmpeg_path,

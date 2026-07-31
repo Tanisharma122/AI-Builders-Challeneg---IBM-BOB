@@ -296,10 +296,27 @@ def process_clip(
     try:
         run_ffmpeg(cmd)
     except FFmpegError as exc:
-        logger.error(
-            "[%s] FFmpeg failed for clip rank=%d: %s", job_id, clip.rank, exc
-        )
-        raise
+        # If the subtitle filter caused the failure, retry without subtitles.
+        # This commonly happens on Windows when libass/fontconfig is missing.
+        if srt_path is not None and "subtitles" in str(exc).lower():
+            logger.warning(
+                "[%s] Subtitle filter failed for clip rank=%d — retrying without subtitles. Error: %s",
+                job_id, clip.rank, exc,
+            )
+            cmd_no_sub = build_trim_and_crop_command(
+                src=source_video_path,
+                out=output_path,
+                start=clip.start_time,
+                end=clip.end_time,
+                crop_filter=crop_filter,
+                srt_path=None,  # no subtitles
+            )
+            run_ffmpeg(cmd_no_sub)
+        else:
+            logger.error(
+                "[%s] FFmpeg failed for clip rank=%d: %s", job_id, clip.rank, exc
+            )
+            raise
 
     logger.info(
         "[%s] Clip rank=%d rendered → '%s'", job_id, clip.rank, output_path
