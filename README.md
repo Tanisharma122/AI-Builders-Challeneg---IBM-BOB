@@ -184,17 +184,63 @@ response = client.text_generation(
 
 ---
 
-## Selected Challenge Theme
+## Selected Challenge Theme — July 2026
 
-> **"Agentic AI for Creators"** — Building AI agents that autonomously handle multi-step creative workflows, reducing human effort from hours to seconds.
+> ### 🎨 Reimagine Creative Industries with AI
 
-Tani demonstrates agentic behavior through:
+AI is transforming how people create content, tell stories, design experiences, and bring ideas to life. Tani is our direct answer to this challenge — a fully agentic platform that reimagines every stage of the creator workflow, making professional-quality content production accessible to anyone with an idea.
+
+---
+
+### How can AI enhance creativity?
+
+Traditional content creation demands that creators split their attention across dozens of repetitive, technical tasks — transcribing footage, cutting clips, writing titles, generating visuals, and distributing across platforms. Tani removes all of that friction.
+
+By delegating the **technical layer entirely to AI**, creators reclaim their most valuable resource: creative focus. IBM Granite 3.0 doesn't just cut clips — it reads the emotional arc of a conversation, identifies the moment a story peaks, writes the hook that makes someone stop scrolling, and explains *why* that moment will resonate. The creator's voice and vision are amplified, not replaced.
+
+- **AI-generated hooks** — Granite writes the opening line that captures attention in the first 3 seconds
+- **Virality scoring** — Each clip is rated 0–100 with detailed reasoning, giving creators data-driven creative intuition
+- **AI thumbnails** — FLUX.1-schnell generates scroll-stopping visuals from a platform-aware, style-aware prompt
+- **Text-to-image B-roll** — Any scene a creator can describe in words, Tani renders as a cinematic image in seconds
+
+---
+
+### How can AI help people create faster?
+
+A single 1-hour interview contains dozens of publishable moments. Manually finding them, cutting them to 9:16, writing metadata, and distributing them takes **4–8 hours per video**. Tani compresses that to **under 5 minutes** — an 80%+ time reduction.
+
+The full pipeline is autonomous end-to-end:
+
+| Step | Without Tani | With Tani |
+|---|---|---|
+| Transcription | 1–2 hrs manual review | < 60 sec — Faster-Whisper auto |
+| Viral clip identification | 2–4 hrs scrubbing footage | < 30 sec — IBM Granite analysis |
+| 9:16 rendering + captions | 1–2 hrs in editing software | < 2 min — FFmpeg pipeline |
+| Titles, descriptions, hashtags | 30–60 min copywriting | < 10 sec — Granite metadata |
+| YouTube publishing | Manual upload + form fill | One click — OAuth 2.0 API |
+| **Total** | **4–8 hours** | **< 5 minutes** |
+
+Tani demonstrates agentic speed through:
 
 1. **Multi-step autonomy** — The pipeline runs from raw video to live YouTube URL with minimal human input
-2. **Tool use** — The system orchestrates Whisper, Granite, FFmpeg, Pyannote, and YouTube API as specialized tools
-3. **Self-validation** — Granite output is validated; on failure, the agent retries with a stricter prompt
-4. **Adaptive routing** — Falls back to local Ollama if cloud API is unavailable
-5. **Cross-platform distribution** — One clip, exported for YouTube Shorts, Instagram Reels, LinkedIn, and X
+2. **Tool orchestration** — Whisper, Granite, FFmpeg, Pyannote, and YouTube API work as coordinated, specialized agents
+3. **Self-validation** — Granite output is validated against a strict JSON schema; on failure, the agent retries automatically with a stricter prompt
+4. **Adaptive routing** — Falls back to local Ollama if the cloud API is unavailable — zero downtime for creators
+5. **Cross-platform distribution** — One clip, instantly formatted for YouTube Shorts, Instagram Reels, LinkedIn, and X
+
+---
+
+### How can AI unlock entirely new creative experiences?
+
+Tani opens creative doors that simply didn't exist before:
+
+- **Any creator can go viral** — You no longer need a professional editor or years of craft knowledge to produce platform-native short-form content. Tani's AI identifies the best moments even when the creator can't see them yet.
+- **Real-time visual storytelling** — The text-to-image workspace lets creators generate B-roll, concept art, and visual metaphors from a single sentence — images that would require a full design team or stock licensing.
+- **AI-generated thumbnails with brand intelligence** — The thumbnail generator understands platform context (YouTube vs. LinkedIn vs. Reels), visual style, mood, and facial expression — producing assets that used to take 30 minutes in Photoshop in under 10 seconds.
+- **Speaker-aware cinematography** — Pyannote diarization combined with FFmpeg smart cropping means the camera follows the active speaker automatically, bringing broadcast-level production quality to amateur footage.
+- **From idea to live video in one platform** — No switching between tools. The entire creative pipeline — from raw upload to live YouTube Shorts URL — happens inside a single, unified dark-themed workspace.
+
+> Tani doesn't just make existing workflows faster. It makes *entirely new creative workflows possible* — for solo creators, small teams, and anyone who has a story to tell but not the time or resources to tell it professionally.
 
 ---
 
